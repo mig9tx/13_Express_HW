@@ -1,0 +1,24 @@
+{
+  "name": "13_express_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mig9tx/13_Express_HW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mig9tx/13_Express_HW/issues"
+  },
+  "homepage": "https://github.com/mig9tx/13_Express_HW#readme"
+}
