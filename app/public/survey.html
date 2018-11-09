@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder - Express</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Friend Finder</h1>
+            <h4>Answer the survey below to find your match!</h4>
+        </div>
+        <div id="user info">
+            <form>
+                <div class="form-group">
+                    <label for="userName">Name</label>
+                    <input type="text" class="form-control" id="userName" aria-describedby="nameHelp" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="imageURL">Add image URL</label>
+                    <input type="text" class="form-control" id="image" placeholder="http://www.example.com">
+                    <small id="imageHelp" class="form-text text-muted">Please add an image url to save to your profile.</small>
+
+                </div>
+            </form>
+        </div>
+        <div class="survey-area">
+            <div id="question-1">
+                <h4>1. I like being the center of attention?</h4>
+
+                <select id="q1" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-2">
+                <h4>2. I prefer dogs over cats.</h4>
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Select one
+                    </button> -->
+                <select id="q2" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-3">
+                <h4>3. I like to visit new places.</h4>
+                <select id="q3" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <br>
+            <div id="question-4">
+                <h4>4. I believe that there is no absolute right and wrong.</h4>
+                <select id="q1" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <br>
+            <div id="question-5">
+                <h4>5. I can't stand confrontations.</h4>
+                <!-- <div class="dropdown"> -->
+
+                <select id="q5" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-6">
+                <h4>6. I like to tidy up.</h4>
+                <!-- <div class="dropdown"> -->
+
+                <select id="q6" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-7">
+                <h4>7. I can talk others into doing things.</h4>
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Select one
+                    </button> -->
+                <select id="q7" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-8">
+                <h4>8. I pay my bills on time.</h4>
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Select one
+                    </button> -->
+                <select id="q8" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+                <!-- </div> -->
+            </div>
+            <br>
+            <div id="question-9">
+                <h4>9. I like to solve complex problems.</h4>
+                <select id="q9" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <br>
+            <div id="question-10">
+                <h4>10. I have a vivid imagination.</h4>
+                <select id="q10" class="" aria-labelledby="dropdownMenuButton">
+                    <option class="" value="1">1 Strongly Disagree</option>
+                    <option class="" value="2">2</option>
+                    <option class="" value="3">3 Neutral</option>
+                    <option class="" value="4">4</option>
+                    <option class="" value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <br>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<script>
+    $("#submit").on("click", function () {
+        var friendData = {
+            name: $("#userName").val(),
+            image: $("#image").val(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
+        }
+
+        
+
+
+
+
+        $.post("/api/friends", friendData, //goes in the end. Get api data then compare, post.
+            function (data) {
+                console.log(data);
+                // // If a table is available... tell user they are booked.
+                // if (data) {
+                //     alert("Yay! You are officially booked!");
+                // }
+
+                // // If a table is available... tell user they on the waiting list.
+                // else {
+                //     alert("Sorry you are on the wait list");
+                // }
+
+                // // Clear the form when submitting
+                // $("#reserve-name").val("");
+                // $("#reserve-phone").val("");
+                // $("#reserve-email").val("");
+                // $("#reserve-unique-id").val("");
+
+            });
+    })
+</script>
+
+</html>
