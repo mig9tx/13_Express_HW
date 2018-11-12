@@ -252,17 +252,17 @@
                 }
 
                 for (let j = 0; j < serverFriends.length; j++) {
-                    for (let i = 0; i < serverFriends[i].scores.length; i++) {
+                    for (let i = 0; i < serverFriends[j].scores.length; i++) {
                         holderArray.push(parseInt(serverFriends[i].scores[i]));
                         if (holderArray[i] !== newArray[i]) {
                             diffArray.push(Math.abs(holderArray[i] - newArray[i]));
                         }
-                        difference = diffArray.reduce(getSum);
-
+                        
                         // if (difference <= difference)
                     }
-                    diffArray = [];
-                    holderArray = [];
+                    difference = diffArray.reduce(getSum);
+                    // diffArray = [];
+                    // holderArray = [];
                     console.log("difference points: " + difference);
                     console.log(diffArray);
                     console.log(serverFriends[2].name);
