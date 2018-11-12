@@ -1,0 +1,11 @@
+.jumbotron {
+    background: url(../images/friendFinderLogo.png);
+    background-size: 100% 100%;
+    height: 400px;
+    color: lightseagreen;
+}
+
+#friendName{
+    font-size: 40px;
+    color: orangered;
+}

@@ -1,6 +1,6 @@
 const friends = [{
         "name": "Joey",
-        "image": "https://themodernjedi.files.wordpress.com/2012/08/joey-shocked.jpg",
+        "image": "./assets/public/images/Joey.gif",
         "scores": [
             "5",
             "4",
@@ -16,7 +16,7 @@ const friends = [{
     },
     {
         "name": "Ross",
-        "image": "https://giphy.com/embed/4qmcuu67Hxx0Q",
+        "image": "./assets/public/images/Ross.gif",
         "scores": [
             "3",
             "3",
@@ -32,7 +32,7 @@ const friends = [{
     },
     {
         "name": "Chandler",
-        "image": "https://gph.is/1eRxhJy",
+        "image": "./assets/public/images/chandler.gif",
         "scores": [
             "2",
             "3",
@@ -48,7 +48,7 @@ const friends = [{
     },
     {
         "name": "Phoebe",
-        "image": "https://gph.is/1FwRLhd",
+        "image": "./assets/public/images/phoebe.gif",
         "scores": [
             "3",
             "1",
@@ -64,7 +64,7 @@ const friends = [{
     },
     {
         "name": "Monica",
-        "image": "http://www.comedycentral.co.uk/sites/default/files/styles/image-w-900-scale/public/cc_uk/galleries/2016/08/25/15.gif?itok=IUiV-V0p",
+        "image": "./assets/public/images/monica.gif",
         "scores": [
             "5",
             "3",
@@ -80,7 +80,7 @@ const friends = [{
     },
     {
         "name": "Rachel",
-        "image": "https://gph.is/1ICT7gu",
+        "image": "./assets/public/images/rachel.gif",
         "scores": [
             "4",
             "1",

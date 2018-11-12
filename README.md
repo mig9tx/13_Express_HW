@@ -8,7 +8,7 @@ Once the user is matched, their results are POSTed to the friends file and store
 
 ## This application utilizes the following:
 
-node.js for the routing of the files and information.
+Express and node.js for the routing of the files and api.
 
 javaScript/jQuery for the logic and DOM manipulation.
 

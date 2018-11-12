@@ -16,217 +16,181 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/public/css/style.css">
+
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Friend Finder</h1>
-            <h4>Answer the survey below to find your match!</h4>
-            <a href="https://sheltered-everglades-18076.herokuapp.com/api/friends">api/friends</a>
+        </div>
+        <div id="instructions">
+            <a href="https://sheltered-everglades-18076.herokuapp.com/api/friends"><button id="survey-btn" class="btn btn-warning btn-lg">api/friends</button></a>
+            <h1>Fill out the survey!</h1>
+            <h4>See if you match with one of the character's from friends or one of our dozen users</h4>
         </div>
         <div id="user info">
-            <form>
+            <form required>
                 <div class="form-group">
                     <label for="userName">Name</label>
-                    <input type="text" class="form-control" id="userName" aria-describedby="nameHelp" placeholder="Enter Name">
+                    <input type="text" class="form-control" name="userName" id="userName" aria-describedby="nameHelp"
+                        placeholder="Enter Name" required>
                 </div>
                 <div class="form-group">
                     <label for="imageURL">Add image URL</label>
-                    <input type="text" class="form-control" id="image" placeholder="http://www.example.com">
+                    <input type="text" class="form-control" name="image" id="image" placeholder="http://www.example.com"
+                        required>
                     <small id="imageHelp" class="form-text text-muted">Please add an image url to save to your profile.</small>
 
                 </div>
+
+                <div class="survey-area">
+                    <div id="question-1">
+                        <h4>1. I like being the center of attention?</h4>
+
+                        <select id="q1" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-2">
+                        <h4>2. I prefer dogs over cats.</h4>
+                        <select id="q2" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-3">
+                        <h4>3. I like to visit new places.</h4>
+                        <select id="q3" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-4">
+                        <h4>4. I believe that there is no absolute right and wrong.</h4>
+                        <select id="q4" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-5">
+                        <h4>5. I can't stand confrontations.</h4>
+
+                        <select id="q5" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-6">
+                        <h4>6. I like to tidy up.</h4>
+
+                        <select id="q6" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-7">
+                        <h4>7. I can talk others into doing things.</h4>
+
+                        <select id="q7" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <div id="question-8">
+                        <h4>8. I pay my bills on time.</h4>
+
+                        <select id="q8" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <div id="question-9">
+                        <h4>9. I like to solve complex problems.</h4>
+                        <select id="q9" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="question-10">
+                        <h4>10. I have a vivid imagination.</h4>
+                        <select id="q10" class="" aria-labelledby="dropdownMenuButton">
+                            <option class="" value="1">1 Strongly Disagree</option>
+                            <option class="" value="2">2</option>
+                            <option class="" value="3">3 Neutral</option>
+                            <option class="" value="4">4</option>
+                            <option class="" value="5">5 Strongly Agree</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                <div class="modal" id="matchModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Your Match is: </h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div id="friendName"></div>
+                                <br>
+                                <img id="friendPhoto" width="400" />
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </form>
-        </div>
-        <div class="survey-area">
-            <div id="question-1">
-                <h4>1. I like being the center of attention?</h4>
-
-                <select id="q1" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-2">
-                <h4>2. I prefer dogs over cats.</h4>
-                <!-- <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Select one
-                    </button> -->
-                <select id="q2" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-3">
-                <h4>3. I like to visit new places.</h4>
-                <select id="q3" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-            </div>
-            <br>
-            <div id="question-4">
-                <h4>4. I believe that there is no absolute right and wrong.</h4>
-                <select id="q4" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-            </div>
-            <br>
-            <div id="question-5">
-                <h4>5. I can't stand confrontations.</h4>
-                <!-- <div class="dropdown"> -->
-
-                <select id="q5" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-6">
-                <h4>6. I like to tidy up.</h4>
-                <!-- <div class="dropdown"> -->
-
-                <select id="q6" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-7">
-                <h4>7. I can talk others into doing things.</h4>
-                <!-- <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Select one
-                    </button> -->
-                <select id="q7" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-8">
-                <h4>8. I pay my bills on time.</h4>
-                <!-- <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Select one
-                    </button> -->
-                <select id="q8" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-                <!-- </div> -->
-            </div>
-            <br>
-            <div id="question-9">
-                <h4>9. I like to solve complex problems.</h4>
-                <select id="q9" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-            </div>
-            <br>
-            <div id="question-10">
-                <h4>10. I have a vivid imagination.</h4>
-                <select id="q10" class="" aria-labelledby="dropdownMenuButton">
-                    <option class="" value="1">1 Strongly Disagree</option>
-                    <option class="" value="2">2</option>
-                    <option class="" value="3">3 Neutral</option>
-                    <option class="" value="4">4</option>
-                    <option class="" value="5">5 Strongly Agree</option>
-                </select>
-            </div>
-            <br>
-            <button id="submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
-        </div>
-
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Friend Finder</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        Your profile has been added! Let's find your match!
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="modal" id="matchModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Your Match is: </h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <div id="friendName"></div>
-                        <br>
-                        <div id="friendPhoto"></div>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </div>
 
@@ -237,7 +201,7 @@
 </body>
 
 <script>
-    $("#submit").on("click", function () {
+    $("#submit").on("click", function (event) {
         var friendData = {
             name: $("#userName").val(),
             image: $("#image").val(),
@@ -255,15 +219,6 @@
             ]
         };
 
-        // console.log(friendData.scores);
-        let newArray = [];
-
-        for (let i = 0; i < friendData.scores.length; i++) {
-            newArray.push(parseInt(friendData.scores[i]));
-        }
-
-        // console.log(newArray);
-
         $.ajax({
                 url: "/api/friends",
                 method: "GET"
@@ -275,43 +230,45 @@
                 let currentDifference = 0;
                 let lowDifference = 40;
 
+
                 function getSum(total, num) {
                     return total + num;
                 }
 
                 for (let j = 0; j < serverFriends.length; j++) { //iterates through array of objects
                     for (let i = 0; i < serverFriends[j].scores.length; i++) { //iterates through the scores for friend object
-                        holderArray.push(parseInt(serverFriends[i].scores[i])); //saves the scores of the user as an array of integers
-                        if (holderArray[i] !== newArray[i]) { //compares the numbers in the two arrays, if not the same, then
-                            diffArray.push(Math.abs(holderArray[i] - newArray[i])); //saves numbers that are different in a holderarray for adding later
-                            console.log(diffArray);
-                        }
+                        holderArray.push(parseInt(serverFriends[j].scores[i])); //saves the scores of the user as an array of integers
+                        //compares the numbers in the two arrays, if not the same, then
+                        diffArray.push(Math.abs(holderArray[i] - friendData.scores[i])); //saves numbers that are different in a holderarray for adding later
+                        // console.log(diffArray);
+
                     }
+                    console.log(diffArray);
                     currentDifference = diffArray.reduce(getSum);
+                    console.log(currentDifference);
                     if (currentDifference < lowDifference) {
                         lowDifference = currentDifference;
-                        data = serverFriends[j];
+                        mostAlike = serverFriends[j];
                     }
                     diffArray = [];
                     holderArray = [];
                 }
                 console.log("difference points: " + currentDifference);
-                console.log(data.name);
+                console.log(mostAlike);
 
                 console.log(holderArray);
-                console.log(friendData.name);
-                console.log(newArray);
+
+                $.post("/api/friends", friendData, //goes in the end. Get api data then compare, post.
+                    function (data) {
+                        console.log(friendData);
+                        $('#friendName').text(mostAlike.name);
+                        $('#friendPhoto').attr("src", mostAlike.image);
+                        $('#matchModal').modal('toggle');
+
+                    });
 
             });
 
-        $.post("/api/friends", friendData, //goes in the end. Get api data then compare, post.
-            function (data) {
-                console.log(friendData);
-                $('#friendName').text(data.name);
-                $('#friendPhoto').attr("src", data.image);
-                $('#matchModal').modal('toggle');
-
-            });
     })
 </script>
 
