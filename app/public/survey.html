@@ -245,31 +245,34 @@
                 let holderArray = [];
                 let diffArray = [];
                 let mostAlike = {};
-                let difference = 0;
+                let currentDifference = 0;
+                let lowDifference = 40;
 
                 function getSum(total, num) {
                     return total + num;
                 }
 
-                for (let j = 0; j < serverFriends.length; j++) {
-                    for (let i = 0; i < serverFriends[j].scores.length; i++) {
-                        holderArray.push(parseInt(serverFriends[i].scores[i]));
-                        if (holderArray[i] !== newArray[i]) {
+                for (let j = 0; j < serverFriends.length; j++) {//iterates through array of objects
+                    for (let i = 0; i < serverFriends[j].scores.length; i++) {//iterates through the scores for friend object
+                        holderArray.push(parseInt(serverFriends[i].scores[i]));//saves the scores of the user as an array of integers
+                        if (holderArray[i] !== newArray[i]) {//saves numbers that are different in a holderarray for adding later
                             diffArray.push(Math.abs(holderArray[i] - newArray[i]));
                         }
-                        
-                        // if (difference <= difference)
                     }
-                    difference = diffArray.reduce(getSum);
-                    // diffArray = [];
-                    // holderArray = [];
-                    console.log("difference points: " + difference);
+                    currentDifference = diffArray.reduce(getSum);
+                    if (currentDifference < lowDifference){
+                        lowDifference = currentDifference;
+                        mostAlike = serverFriends[j];
+                    }
+                    diffArray = [];
+                    holderArray = [];
+                }
+                    console.log("difference points: " + currentDifference);
                     console.log(diffArray);
                     console.log(serverFriends[2].name);
                     console.log(holderArray);
                     console.log(friendData.name);
                     console.log(newArray);
-                }
             });
 
         $.post("/api/friends", friendData, //goes in the end. Get api data then compare, post.
