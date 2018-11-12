@@ -179,28 +179,28 @@
         </div>
 
         <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                  
+            <div class="modal-dialog">
+                <div class="modal-content">
+
                     <!-- Modal Header -->
                     <div class="modal-header">
-                      <h4 class="modal-title">Friend Finder</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Friend Finder</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    
+
                     <!-- Modal body -->
                     <div class="modal-body">
-                      Your profile has been added! Let's find your match!
+                        Your profile has been added! Let's find your match!
                     </div>
-                    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
-                    
-                  </div>
+
                 </div>
-              </div>
+            </div>
+        </div>
     </div>
 
 
@@ -252,27 +252,27 @@
                     return total + num;
                 }
 
-                for (let j = 0; j < serverFriends.length; j++) {//iterates through array of objects
-                    for (let i = 0; i < serverFriends[j].scores.length; i++) {//iterates through the scores for friend object
-                        holderArray.push(parseInt(serverFriends[i].scores[i]));//saves the scores of the user as an array of integers
-                        if (holderArray[i] !== newArray[i]) {//saves numbers that are different in a holderarray for adding later
-                            diffArray.push(Math.abs(holderArray[i] - newArray[i]));
+                for (let j = 0; j < serverFriends.length; j++) { //iterates through array of objects
+                    for (let i = 0; i < serverFriends[j].scores.length; i++) { //iterates through the scores for friend object
+                        holderArray.push(parseInt(serverFriends[i].scores[i])); //saves the scores of the user as an array of integers
+                        if (holderArray[i] !== newArray[i]) { //compares the numbers in the two arrays, if not the same, then
+                            diffArray.push(Math.abs(holderArray[i] - newArray[i])); //saves numbers that are different in a holderarray for adding later
+                            currentDifference = diffArray.reduce(getSum);
+                            console.log(diffArray);
                         }
                     }
-                    currentDifference = diffArray.reduce(getSum);
-                    if (currentDifference < lowDifference){
+                    if (currentDifference < lowDifference) {
                         lowDifference = currentDifference;
                         mostAlike = serverFriends[j];
                     }
                     diffArray = [];
                     holderArray = [];
                 }
-                    console.log("difference points: " + currentDifference);
-                    console.log(diffArray);
-                    console.log(serverFriends[2].name);
-                    console.log(holderArray);
-                    console.log(friendData.name);
-                    console.log(newArray);
+                console.log("difference points: " + currentDifference);
+                console.log(mostAlike);
+                console.log(holderArray);
+                console.log(friendData.name);
+                console.log(newArray);
             });
 
         $.post("/api/friends", friendData, //goes in the end. Get api data then compare, post.
